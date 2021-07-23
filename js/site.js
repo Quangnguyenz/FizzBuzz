@@ -11,7 +11,7 @@ function getValues() {
 
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
         let FizzBuzzResults = fizzBuzzC(fizzValue, buzzValue);
-        displayData(FizzBuzzResults);
+        displayDataB(FizzBuzzResults);
     } else {
         alert("Must enter integers");
     }
@@ -110,6 +110,27 @@ function displayData(fbArray) {
         rowCols[4].classList.add(fbArray[i + 4]);
         rowCols[4].textContent = fbArray[i + 4];
 
+        tableBody.appendChild(tableRow);
+    }
+}
+
+function displayDataB(resultArr){
+    let tableBody = document.getElementById("results");
+
+    let templateRow = document.getElementById("fbTemplate");
+
+    tableBody.innerHTML = "";
+    
+    for (let i = 0; i < resultArr.length; i += 2) {
+        
+        let tableRow = document.importNode(templateRow.content, true);
+
+        let rowCols = tableRow.querySelectorAll("td");
+        
+        rowCols[0].textContent = resultArr[i];
+        rowCols[0].classList.add(resultArr[i]);
+        rowCols[1].textContent = resultArr[i+1];
+        rowCols[1].classList.add(resultArr[i+1]);
         tableBody.appendChild(tableRow);
     }
 }
