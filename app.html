@@ -67,12 +67,12 @@
                     <form class="row gx-2 gy-2">
                         <h3>Enter Value</h3>
                         <div class="col">
-                            <input id="startValue" type="number" class="form-control" placeholder="Start Value"
-                                aria-label="Start Value">
+                            <input id="fizzValue" type="number" class="form-control" placeholder="Enter Fizz value"
+                                aria-label="Enter Fizz Value" value=3>
                         </div>
                         <div class="col">
-                            <input id="endValue" type="number" class="form-control" placeholder="End Value"
-                                aria-label="End Value">
+                            <input id="buzzValue" type="number" class="form-control" placeholder="Enter Buzz Value"
+                                aria-label="Enter Buzz Value" value=5>
                         </div>                        
                     </form>
                     <div class="d-flex mt-2 justify-content-end">
@@ -114,6 +114,17 @@
             </div>
         </div>
     </footer>
+
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
