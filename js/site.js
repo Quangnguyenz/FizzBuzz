@@ -121,7 +121,7 @@ function displayDataB(resultArr){
 
     tableBody.innerHTML = "";
     
-    for (let i = 0; i < resultArr.length; i += 2) {
+    for (let i = 0; i < resultArr.length; i += 4) {
         
         let tableRow = document.importNode(templateRow.content, true);
 
@@ -131,6 +131,10 @@ function displayDataB(resultArr){
         rowCols[0].classList.add(resultArr[i]);
         rowCols[1].textContent = resultArr[i+1];
         rowCols[1].classList.add(resultArr[i+1]);
+        rowCols[2].textContent = resultArr[i+2];
+        rowCols[2].classList.add(resultArr[i+2])
+        rowCols[3].textContent = resultArr[i+3];
+        rowCols[3].classList.add(resultArr[i+3])
         tableBody.appendChild(tableRow);
     }
 }
